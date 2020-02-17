@@ -43,7 +43,7 @@ UPDATE_EVERY = 4        # how often to update the network
 
 The following plot shows the training evoluiton of the agent, over multiple episodes. The agent learns really fast (by episode 400) the action-value function that generates the optimum policy to receive an average reward (over 100 episodes) of at least +13. The learning stagnates to a reward of around 16 after the 600th episode.
 
-[Rewards evolution over multiple episodes](https://github.com/mionescu/udacity-navigation/blob/report_improvement/rewards_plot_v1.png)
+![image](https://github.com/mionescu/udacity-navigation/blob/report_improvement/rewards_plot_v1.png)
 
 
 ### 4. Ideas for Future Work
