@@ -45,14 +45,16 @@ The following plot shows the training evoluiton of the agent, over multiple epis
 ![image](https://github.com/mionescu/udacity-navigation/blob/report_improvement/rewards_plot_v1.png)
 *Rewards evolution over multiple episodes*
 
+### 4. Discussion
+In trying to improve the performance of the model, the number of nodes in the two hidden layers of the network was increased from 128 to 512 and 1024. In the case of two layers with 512 nodes each, an average score of 13.11 has been obtained by episode 700-800, much later than in the inital design with two hidden layers of 128 nodes each. For layers with 1024 nodes, the minimi score is achieved even slower, so we can conclude that there is no significant improvement to be expected by increasing the number of hidden nodes beyond 128, neither in terms of speed of convergene of the NN nor in the reduction of the variance on the scores.
 
-### 4. Ideas for Future Work
+The number of layers was changed to 4 instead of 2, with 1024 nodes each. The effect on the scores was that the algorithm reached an average of +15 from the first 100 episodes. However, the variance was significantly high, so this design is still not sufficiently realiable.
+
+### 5. Ideas for Future Work
 
 To adapt to the (relatively) large state space of the environment, the hyperparameters need to be more thoroughly optimized.
 
 Currently, there is a large variance on the rewards, which means that even though the average score (over 100 episodes, for instance) is a little high, there is no guarantee that the score for every episode is sufficiently high. In fact, it can even be close to 0. The variance of the model could possibly be further improved by changing a) number of nodes in the NN and/or b) the number of layers in the NN model.
-
-In trying to improve the performance of the model, the number of nodes in the two hidden layers of the network was increased from 128 to 512. In this case, an average score of 13.11 has been obtained by episode 700, much later than in the inital design with two hidden layers of 128 nodes. However, the improvement brought by the increased number of hidden nodes is that the variance on the scores was greatly reduced.
 
 The epsillon, and tau parameters could be influencing the stability of the DQN in converging towards an optimum policy. The fact that there is a plateau in rewards around 15-16 bananas, could be due to eps_end factor. Possibly, *eps_end* should be much smaller to reduce even further the randomness of the agent.
 
