@@ -54,7 +54,7 @@ The number of layers was changed to 4 instead of 2, with 1024 nodes each. The ef
 
 To adapt to the (relatively) large state space of the environment, the hyperparameters need to be more thoroughly optimized.
 
-Currently, there is a large variance on the rewards, which means that even though the average score (over 100 episodes, for instance) is a little high, there is no guarantee that the score for every episode is sufficiently high. In fact, it can even be close to 0. The variance of the model could possibly be further improved by changing a) number of nodes in the NN and/or b) the number of layers in the NN model.
+Currently, there is a large variance on the rewards, which means that even though the average score (over 100 episodes, for instance) is a little high, there is no guarantee that the score for every episode is sufficiently high. In fact, it can even be close to 0. The variance of the model could possibly be further improved by changing a) number of nodes in the NN and/or b) the number of layers in the NN model. As outlined in the discussion section, improvements by increasing the number of nodes or layers were not observed; a furhter investigation is required on this topic.
 
 The epsillon, and tau parameters could be influencing the stability of the DQN in converging towards an optimum policy. The fact that there is a plateau in rewards around 15-16 bananas, could be due to eps_end factor. Possibly, *eps_end* should be much smaller to reduce even further the randomness of the agent.
 
